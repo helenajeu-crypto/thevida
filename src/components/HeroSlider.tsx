@@ -26,17 +26,17 @@ const slides: Slide[] = [
   },
   {
     id: 3,
-    background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    background: `${process.env.PUBLIC_URL}/images/homehero/slide1.jpeg`,
     title: '전문적인 케어와',
     subtitle: '편안한 환경을 제공합니다',
-    type: 'gradient'
+    type: 'image'
   },
   {
     id: 4,
-    background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    background: `${process.env.PUBLIC_URL}/images/homehero/slide2.jpeg`,
     title: '24시간 케어로',
     subtitle: '안전하고 따뜻한 보호를 약속합니다',
-    type: 'gradient'
+    type: 'image'
   }
 ];
 

@@ -63,7 +63,7 @@ const ServicesGuide: React.FC = () => {
                 <div className="mixed-gallery">
                   <div className="gallery-item" data-ratio="4:3">
                     <img 
-                      src="/images/services/rehabilitation/re1.png" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re1.png`}
                       alt="더비다 재활프로그램 - 전동 상하지 운동기구"
                       className="gallery-image"
                     />
@@ -71,7 +71,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="4:3">
                     <img 
-                      src="/images/services/rehabilitation/re2.png" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re2.png`}
                       alt="더비다 재활프로그램 - 틸팅 테이블"
                       className="gallery-image"
                     />
@@ -79,7 +79,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="4:3">
                     <img 
-                      src="/images/services/rehabilitation/re4.png" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re4.png`}
                       alt="더비다 재활프로그램 - 워커 보행 훈련"
                       className="gallery-image"
                     />
@@ -87,7 +87,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="3:4">
                     <img 
-                      src="/images/services/rehabilitation/re14.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re14.jpg`}
                       alt="더비다 재활프로그램 - 종합 재활"
                       className="gallery-image"
                     />
@@ -95,7 +95,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="3:4">
                     <img 
-                      src="/images/services/rehabilitation/re5.png" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re5.png`}
                       alt="더비다 재활프로그램 - 로봇 보행 훈련"
                       className="gallery-image"
                     />
