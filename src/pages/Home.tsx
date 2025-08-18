@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroSlider from '../components/HeroSlider';
-import AdminPanel from '../components/AdminPanel';
 import './Home.css';
 
 const Home: React.FC = () => {
   return (
     <div className="home">
-      <AdminPanel />
 
       {/* 
         관리자 가이드 - Hero Section:
