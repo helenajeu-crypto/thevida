@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 브랜드 색상 변수 */
+:root {
+  --brand-color: #004834;
+  --brand-color-light: #006644;
+  --brand-color-dark: #003322;
+  --brand-font: 'Poiret One', cursive;
+  
+  /* 새로운 색상 팔레트 */
+  --white: #ffffff;
+  --white-off: #f8f9fa;
+  --white-warm: #fafafa;
+  --gold: #d4af37;
+  --gold-light: #e6c547;
+  --gold-dark: #b8941f;
+  --gold-subtle: #f4e4a6;
+  --gray-light: #f5f5f5;
+  --gray-medium: #e0e0e0;
+  --gray-dark: #666666;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --shadow-light: rgba(0, 72, 52, 0.1);
+  --shadow-medium: rgba(0, 72, 52, 0.2);
+  --shadow-dark: rgba(0, 72, 52, 0.3);
+}
+
+body {
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

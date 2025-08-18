@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer rounded form -->
+  <circle cx="100" cy="90" r="50" stroke="currentColor" stroke-width="6"/>
+  <!-- Base curve -->
+  <path d="M40 140 C 70 170, 130 170, 160 140" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Leaf -->
+  <path d="M140 130 C 155 122, 168 118, 180 118 C 168 130, 160 142, 156 154" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Inner gentle stems (abstract care motif) -->
+  <path d="M100 60 V140" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+  <path d="M82 85 C 82 75, 92 72, 100 72" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M118 95 C 118 105, 108 108, 100 108" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>
+
+
+
+
+
+
+

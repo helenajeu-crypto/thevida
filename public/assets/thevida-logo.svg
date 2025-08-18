@@ -1,0 +1,20 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main inverted U-shaped arch outline -->
+  <path d="M6 10 Q25 0 44 10 L44 30 Q25 40 6 30 Z" fill="none" stroke="#004834" stroke-width="1.5"/>
+  
+  <!-- Left side - Two stacked C shapes (more curved) -->
+  <path d="M12 16 Q16 14 20 16 Q16 18 12 16" fill="none" stroke="#004834" stroke-width="1.8"/>
+  <path d="M12 21 Q16 19 20 21 Q16 23 12 21" fill="none" stroke="#004834" stroke-width="1.8"/>
+  
+  <!-- Center - F shape (more prominent) -->
+  <line x1="25" y1="14" x2="25" y2="28" stroke="#004834" stroke-width="2"/>
+  <line x1="25" y1="18" x2="31" y2="18" stroke="#004834" stroke-width="2"/>
+  
+  <!-- Right side - L shape (more prominent) -->
+  <line x1="33" y1="14" x2="33" y2="28" stroke="#004834" stroke-width="2"/>
+  <line x1="33" y1="14" x2="39" y2="14" stroke="#004834" stroke-width="2"/>
+  
+  <!-- Leaf shapes at bottom (more organic) -->
+  <path d="M10 32 Q13 30 16 32 Q13 34 10 32" fill="none" stroke="#004834" stroke-width="1.2"/>
+  <path d="M34 32 Q37 30 40 32 Q37 34 34 32" fill="none" stroke="#004834" stroke-width="1.2"/>
+</svg>
