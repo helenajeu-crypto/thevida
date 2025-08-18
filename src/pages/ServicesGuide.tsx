@@ -103,7 +103,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="3:4">
                     <img 
-                      src="/images/services/rehabilitation/re15.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re15.jpg`}
                       alt="더비다 재활프로그램 - 추가 재활 프로그램"
                       className="gallery-image"
                     />
@@ -111,7 +111,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="4:3">
                     <img 
-                      src="/images/services/rehabilitation/re6.png" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re6.png`}
                       alt="더비다 재활프로그램 - 재활치료실"
                       className="gallery-image"
                     />
@@ -119,7 +119,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="3:4">
                     <img 
-                      src="/images/services/rehabilitation/re7.png" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re7.png`}
                       alt="더비다 재활프로그램 - 물리치료"
                       className="gallery-image"
                     />
@@ -127,7 +127,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="3:4">
                     <img 
-                      src="/images/services/rehabilitation/re8" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re8`}
                       alt="더비다 재활프로그램 - 운동치료"
                       className="gallery-image"
                     />
@@ -135,7 +135,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="4:3">
                     <img 
-                      src="/images/services/rehabilitation/re9" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re9`}
                       alt="더비다 재활프로그램 - 재활 프로그램"
                       className="gallery-image"
                     />
@@ -143,7 +143,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="3:4">
                     <img 
-                      src="/images/services/rehabilitation/re10" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re10`}
                       alt="더비다 재활프로그램 - 맞춤형 치료"
                       className="gallery-image"
                     />
@@ -151,7 +151,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="4:3">
                     <img 
-                      src="/images/services/rehabilitation/re11.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re11.jpg`}
                       alt="더비다 재활프로그램 - 전문 치료"
                       className="gallery-image"
                     />
@@ -159,7 +159,7 @@ const ServicesGuide: React.FC = () => {
                   
                                     <div className="gallery-item" data-ratio="3:4">
                     <img 
-                      src="/images/services/rehabilitation/re13.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re13.jpg`}
                       alt="더비다 재활프로그램 - 치료 환경"
                       className="gallery-image"
                     />
@@ -169,7 +169,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="3:4">
                     <img 
-                      src="/images/services/rehabilitation/re12.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/services/rehabilitation/re12.jpg`}
                       alt="더비다 재활프로그램 - 재활 시설"
                       className="gallery-image"
                     />
@@ -209,7 +209,7 @@ const ServicesGuide: React.FC = () => {
                 <div className="mixed-gallery">
                   <div className="gallery-item" data-ratio="4:3">
                     <img 
-                      src="/images/services/cognitive/cog1.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/services/cognitive/cog1.jpg`}
                       alt="더비다 인지프로그램 - 인지 활동 1"
                       className="gallery-image"
                     />
@@ -217,7 +217,7 @@ const ServicesGuide: React.FC = () => {
                   
                   <div className="gallery-item" data-ratio="4:3">
                     <img 
-                      src="/images/services/cognitive/cog2.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/services/cognitive/cog2.jpg`}
                       alt="더비다 인지프로그램 - 인지 활동 2"
                       className="gallery-image"
                     />
