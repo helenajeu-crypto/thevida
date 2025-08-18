@@ -11,7 +11,7 @@ import RehabilitationProgram from './pages/RehabilitationProgram';
 import CognitiveProgram from './pages/CognitiveProgram';
 import BirthdayParty from './pages/BirthdayParty';
 import ServicesGuide from './pages/ServicesGuide';
-import AdminPanel from './components/AdminPanel';
+
 import './App.css';
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
             <Route path="/cognitive" element={<CognitiveProgram />} />
             <Route path="/birthday" element={<BirthdayParty />} />
             <Route path="/services-guide" element={<ServicesGuide />} />
-            <Route path="/admin" element={<AdminPanel />} />
+
           </Routes>
         </main>
         <Footer />

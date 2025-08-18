@@ -69,53 +69,7 @@ class ApiClient {
     return this.request('/availability/slot-interval');
   }
 
-  // Admin APIs
-  async adminLogin(credentials: { email: string; password: string }): Promise<ApiResponse> {
-    return this.request('/admin/login', {
-      method: 'POST',
-      body: JSON.stringify(credentials),
-    });
-  }
 
-  async getAdminProfile(token: string): Promise<ApiResponse> {
-    return this.request('/admin/profile', {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  }
-
-  async getAppointments(token: string, params?: any): Promise<ApiResponse> {
-    const queryString = params ? `?${new URLSearchParams(params).toString()}` : '';
-    return this.request(`/admin/appointments${queryString}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  }
-
-  async updateAppointmentStatus(
-    token: string,
-    appointmentId: string,
-    status: string
-  ): Promise<ApiResponse> {
-    return this.request(`/admin/appointments/${appointmentId}/status`, {
-      method: 'PATCH',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ status }),
-    });
-  }
-
-  async getStatistics(token: string, period?: string): Promise<ApiResponse> {
-    const queryString = period ? `?period=${period}` : '';
-    return this.request(`/admin/statistics${queryString}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  }
 
   // 콘텐츠 관리 API
   async getContents(type?: string): Promise<ApiResponse> {
@@ -127,57 +81,7 @@ class ApiClient {
     return this.request(`/content/${id}`);
   }
 
-  async getAdminContents(token: string, params?: any): Promise<ApiResponse> {
-    const queryParams = new URLSearchParams();
-    if (params?.type) queryParams.append('type', params.type);
-    if (params?.page) queryParams.append('page', params.page);
-    if (params?.limit) queryParams.append('limit', params.limit);
 
-    const queryString = queryParams.toString() ? `?${queryParams.toString()}` : '';
-    return this.request(`/content/admin/all${queryString}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  }
-
-  async createContent(token: string, formData: FormData): Promise<ApiResponse> {
-    return this.request('/content', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      body: formData,
-    });
-  }
-
-  async updateContent(token: string, id: string, formData: FormData): Promise<ApiResponse> {
-    return this.request(`/content/${id}`, {
-      method: 'PUT',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      body: formData,
-    });
-  }
-
-  async deleteContent(token: string, id: string): Promise<ApiResponse> {
-    return this.request(`/content/${id}`, {
-      method: 'DELETE',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  }
-
-  async deleteContentImage(token: string, contentId: string, imageName: string): Promise<ApiResponse> {
-    return this.request(`/content/${contentId}/images/${imageName}`, {
-      method: 'DELETE',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  }
 }
 
 export const apiClient = new ApiClient(API_BASE_URL);
