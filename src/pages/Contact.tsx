@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
     };
 
     fetchAvailability();
-  }, [formData.branch, formData.date]);
+  }, [formData.branch, formData.date, formData.time]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

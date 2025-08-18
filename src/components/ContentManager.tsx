@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import apiClient from '../utils/api';
 import './ContentManager.css';
 
@@ -44,21 +44,7 @@ const ContentManager: React.FC = () => {
     isActive: true
   });
 
-  useEffect(() => {
-    const savedToken = localStorage.getItem('adminToken');
-    if (savedToken) {
-      setToken(savedToken);
-      fetchContents();
-    }
-  }, []);
-
-  useEffect(() => {
-    if (token) {
-      fetchContents();
-    }
-  }, [currentPage, filters]);
-
-  const fetchContents = async () => {
+  const fetchContents = useCallback(async () => {
     try {
       setLoading(true);
       const params = {
@@ -77,7 +63,23 @@ const ContentManager: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [token, currentPage, filters]);
+
+  useEffect(() => {
+    const savedToken = localStorage.getItem('adminToken');
+    if (savedToken) {
+      setToken(savedToken);
+      fetchContents();
+    }
+  }, [fetchContents]);
+
+  useEffect(() => {
+    if (token) {
+      fetchContents();
+    }
+  }, [token, fetchContents]);
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

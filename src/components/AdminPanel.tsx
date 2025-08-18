@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import apiClient from '../utils/api';
 import ContentManager from './ContentManager';
 import './AdminPanel.css';
@@ -58,15 +58,7 @@ const AdminPanel: React.FC = () => {
   // Tab state
   const [activeTab, setActiveTab] = useState<'appointments' | 'content'>('appointments');
 
-  useEffect(() => {
-    const savedToken = localStorage.getItem('adminToken');
-    if (savedToken) {
-      setToken(savedToken);
-      setIsLoggedIn(true);
-      fetchAppointments();
-      fetchStatistics();
-    }
-  }, []);
+
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,7 +90,7 @@ const AdminPanel: React.FC = () => {
     setStatistics(null);
   };
 
-  const fetchAppointments = async () => {
+  const fetchAppointments = useCallback(async () => {
     try {
       const params = {
         page: currentPage.toString(),
@@ -114,9 +106,9 @@ const AdminPanel: React.FC = () => {
     } catch (error) {
       console.error('예약 목록 조회 실패:', error);
     }
-  };
+  }, [token, currentPage, filters]);
 
-  const fetchStatistics = async () => {
+  const fetchStatistics = useCallback(async () => {
     try {
       const response = await apiClient.getStatistics(token);
       if (response.success && response.data) {
@@ -125,7 +117,17 @@ const AdminPanel: React.FC = () => {
     } catch (error) {
       console.error('통계 조회 실패:', error);
     }
-  };
+  }, [token]);
+
+  useEffect(() => {
+    const savedToken = localStorage.getItem('adminToken');
+    if (savedToken) {
+      setToken(savedToken);
+      setIsLoggedIn(true);
+      fetchAppointments();
+      fetchStatistics();
+    }
+  }, [fetchAppointments, fetchStatistics]);
 
   const updateAppointmentStatus = async (id: string, status: string) => {
     try {
@@ -144,7 +146,7 @@ const AdminPanel: React.FC = () => {
     if (isLoggedIn) {
       fetchAppointments();
     }
-  }, [currentPage, filters]);
+  }, [isLoggedIn, fetchAppointments]);
 
   if (!isLoggedIn) {
     return (
