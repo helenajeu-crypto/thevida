@@ -11,6 +11,7 @@ import RehabilitationProgram from './pages/RehabilitationProgram';
 import CognitiveProgram from './pages/CognitiveProgram';
 import BirthdayParty from './pages/BirthdayParty';
 import ServicesGuide from './pages/ServicesGuide';
+import Company from './pages/Company';
 
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/cognitive" element={<CognitiveProgram />} />
             <Route path="/birthday" element={<BirthdayParty />} />
             <Route path="/services-guide" element={<ServicesGuide />} />
+            <Route path="/company" element={<Company />} />
 
           </Routes>
         </main>

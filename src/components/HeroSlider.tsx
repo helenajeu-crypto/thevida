@@ -69,11 +69,14 @@ const HeroSlider: React.FC = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`slide ${index === currentSlide ? 'active' : ''}`}
+            className={`slide ${index === currentSlide ? 'active' : ''} ${slide.type === 'image' ? 'image-slide' : ''}`}
             style={{
               background: slide.type === 'image' ? `url(${slide.background})` : slide.background,
-              transform: `translateX(${(index - currentSlide) * 100}%)`
-            }}
+              transform: slide.type === 'image' 
+                ? `translateX(${(index - currentSlide) * 100}%)` 
+                : `translateX(${(index - currentSlide) * 100}%)`,
+              '--slide-offset': `${(index - currentSlide) * 100}%`
+            } as React.CSSProperties}
           >
             <div className="slide-content">
               <h1 className="slide-title">

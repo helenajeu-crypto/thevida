@@ -114,11 +114,9 @@ const Contact: React.FC = () => {
               <p>폼을 작성해 주시면 방문 가능 일정과 안내를 드리겠습니다.</p>
             </div>
             <div className="contact-card-content">
-              <div className="contact-info">
-                <div className="quick-call-buttons">
-                  <a href="tel:032-891-0121" className="btn btn-primary">📞 인천점 바로 전화</a>
-                  <a href="tel:031-464-5075" className="btn btn-primary">📞 안양점 바로 전화</a>
-                </div>
+              <div className="quick-call-buttons">
+                <a href="tel:032-891-0121" className="btn btn-primary">📞 인천점 바로 전화</a>
+                <a href="tel:031-464-5075" className="btn btn-primary">📞 안양점 바로 전화</a>
               </div>
 
               <div className="contact-form-container">

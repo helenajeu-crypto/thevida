@@ -56,7 +56,7 @@ const Home: React.FC = () => {
               <div className="location-content">
                 <h3>더비다 안양점</h3>
                 <p className="location-description">
-                  조용하고 평화로운 환경에서 치매 전문 케어를 제공하는 요양원입니다.
+                  안심할 수 있는 평화롭고 안전한 환경에서 어르신들을 정성껏 보살핍니다.
                 </p>
                 <div className="location-address">
                   📍 경기도 안양시 만안구 전파로 19-1 더비다요양원

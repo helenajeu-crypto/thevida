@@ -79,7 +79,7 @@ const Header: React.FC = () => {
         <div className="header-content">
           <Link to="/" className="logo" onClick={closeMobileMenu}>
             <span className="logo-text">The vida</span>
-            <span className="logo-subtitle">더비다 스테이&케어</span>
+            <span className="logo-subtitle">더비다 스테이 & 케어</span>
           </Link>
 
           <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>

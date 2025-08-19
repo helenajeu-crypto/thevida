@@ -19,7 +19,7 @@ const Locations: React.FC = () => {
       address: '경기도 안양시 만안구 전파로 19-1 더비다요양원',
       phone: '031-464-5075',
       features: ['전문 치매케어', '물리치료실', '독서실', '야외 산책로'],
-      description: '조용하고 평화로운 환경에서 치매 전문 케어를 제공하는 요양원입니다. 전문 의료진과 함께 개인별 맞춤 케어 프로그램을 운영합니다.',
+      description: '안심할 수 있는 평화롭고 안전한 환경에서 어르신들을 정성껏 보살핍니다.',
       image: '/images/location-anyang.jpg'
     }
   ];

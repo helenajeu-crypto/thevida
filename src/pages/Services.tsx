@@ -4,14 +4,6 @@ import './Services.css';
 const Services: React.FC = () => {
   return (
     <div className="services">
-      {/* Mini Hero */}
-      <section className="mini-hero" aria-label="서비스 안내">
-        <div className="container mini-hero-inner">
-          <h1 className="mini-hero-title">더비다 서비스 안내</h1>
-          <p className="mini-hero-subtitle">프로그램 및 행사</p>
-        </div>
-      </section>
-
       {/* Programs & Events Only */}
       <section className="section programs-section">
         <div className="container">
