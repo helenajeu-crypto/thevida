@@ -2,7 +2,7 @@
   "name": "nursing-home-website",
   "version": "1.0.0",
   "description": "요양원 홈페이지",
-  "homepage": "https://helenajeu-crypto.github.io/thevida",
+  "homepage": "https://thevida.co.kr",
   "private": true,
   "dependencies": {
     "@types/node": "^18.0.0",
