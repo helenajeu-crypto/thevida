@@ -70,13 +70,27 @@ cd thevida
 
 ### 2. 환경 변수 설정
 
+#### 프론트엔드 환경 변수
+```bash
+cp env.example .env
+```
+
+프로젝트 루트의 `.env` 파일을 편집하여 다음 값들을 설정하세요:
+```env
+# API Configuration
+REACT_APP_API_URL=http://localhost:5000/api
+
+# Kakao Maps API Configuration
+REACT_APP_KAKAO_MAP_API_KEY=your-kakao-map-api-key-here
+```
+
 #### 백엔드 환경 변수
 ```bash
 cd backend
 cp env.example .env
 ```
 
-`.env` 파일을 편집하여 다음 값들을 설정하세요:
+백엔드 `.env` 파일을 편집하여 다음 값들을 설정하세요:
 ```env
 # Server Configuration
 PORT=5000

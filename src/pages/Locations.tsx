@@ -1,38 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import KakaoMap from '../components/KakaoMap';
 import './Locations.css';
 
 const Locations: React.FC = () => {
-  const locations = [
-    {
-      id: 1,
-      name: '인천점',
-      address: '인천광역시 미추홀구 제물량로4번길 34-33',
-      phone: '032-891-0121',
-      features: ['24시간 전문 간호', '재활치료실', '해양 전망', '카페테리아'],
-      description: '인천 미추홀구에 위치한 요양원입니다. 편안하고 따뜻한 환경에서 전문적인 케어 서비스를 제공합니다.',
-      image: '/images/location-incheon.jpg'
-    },
-    {
-      id: 2,
-      name: '안양점',
-      address: '경기도 안양시 만안구 전파로 19-1 더비다요양원',
-      phone: '031-464-5075',
-      features: ['전문 치매케어', '물리치료실', '독서실', '야외 산책로'],
-      description: '안심할 수 있는 평화롭고 안전한 환경에서 어르신들을 정성껏 보살핍니다.',
-      image: '/images/location-anyang.jpg'
-    }
-  ];
-
   return (
-    <div className="locations">
+    <div className="locations-page">
       {/* Hero Section */}
       <section className="locations-hero">
+        <div className="hero-background">
+          <div className="hero-overlay"></div>
+        </div>
         <div className="container">
-          <h1 className="locations-hero-title">지점소개</h1>
-          <p className="locations-hero-subtitle">
-            전국 각지에 위치한 따뜻한 요양원 지점들을 소개합니다
-          </p>
+          <div className="hero-content">
+            <h1 className="hero-title">지점 안내</h1>
+            <p className="hero-subtitle">
+              전국 2개 지점에서 전문적이고 따뜻한 케어 서비스를 제공합니다
+            </p>
+          </div>
         </div>
       </section>
 
@@ -99,13 +84,13 @@ const Locations: React.FC = () => {
         <div className="container">
           <h2 className="map-title">지점 위치</h2>
           <div className="map-container">
-            <div className="map-placeholder">
-              <div className="map-icon">🗺️</div>
-              <p className="map-text">전국 지점 위치 지도</p>
-              <p className="map-description">
-                각 지점의 정확한 위치와 교통편을 확인하실 수 있습니다
-              </p>
-            </div>
+            <KakaoMap
+              title="더비다 요양원 지점"
+              address="인천광역시 미추홀구 제물량로4번길 34-33"
+              height={400}
+              level={8}
+              showDirections={true}
+            />
           </div>
         </div>
       </section>

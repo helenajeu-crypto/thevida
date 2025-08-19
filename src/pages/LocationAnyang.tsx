@@ -1,5 +1,5 @@
 import React from 'react';
-import StaticKakaoMap from '../components/StaticKakaoMap';
+import KakaoMap from '../components/KakaoMap';
 import './LocationDetail.css';
 
 const LocationAnyang: React.FC = () => {
@@ -7,6 +7,9 @@ const LocationAnyang: React.FC = () => {
     name: '더비다 안양점',
     address: '경기도 안양시 만안구 전파로 19-1 더비다요양원',
     phone: '031-464-5075',
+    // 안양점의 정확한 좌표 (카카오맵에서 확인한 좌표)
+    lat: 37.3825,
+    lng: 126.9333,
     features: ['재활치료시스템', '물리치료실', '영양관리', '신축생활실'],
     description: '안심할 수 있는 평화롭고 안전한 환경에서 어르신들을 정성껏 보살핍니다.',
     facilities: [
@@ -47,20 +50,19 @@ const LocationAnyang: React.FC = () => {
         <div className="container">
           <div className="overview-grid">
             <div className="overview-content">
-              <h2 className="section-title">지점 소개</h2>
+              <h2 className="section-title">더비다 요양원 인사말</h2>
               <p className="overview-description">
-                안양시 만안구에 위치한 더비다 안양점은 재활과 케어에 최선을 다하는 
-                요양원입니다. 조용하고 평화로운 환경에서 어르신들의 
-                안전과 편안함을 최우선으로 하는 서비스를 제공합니다.
+                안녕하세요, The Vida 원장 임경애입니다.
               </p>
-              <div className="mindset-section">
-                <h3 className="mindset-title">더비다의 마음가짐</h3>
-                <ul className="mindset-list">
-                  <li>어르신을 가족처럼 모시는 마음</li>
-                  <li>사랑하고 섬기며 봉사하는 마음</li>
-                  <li>보호자와 함께하는 마음</li>
-                </ul>
-              </div>
+              <p className="overview-description">
+                오늘날 우리 사회는 초고령화와 핵가족화로 인해 가정 내에서 어르신들을 보살핌에 있어 많은 가족들이 어려움을 겪고 있습니다. 이에 The Vida는 치매, 뇌졸중 등 노인성 질환으로 힘들어하시는 어르신들과 그 가족분들을 위한 요양 시설로, 전문 인력이 각자의 특화 분야에서 헌신적으로 어르신들을 돌보고 있습니다.
+              </p>
+              <p className="overview-description">
+                특히 저희 더비다 요양원은 24시간 케어와 따뜻한 마음으로 어르신들을 모시는 것을 가장 중요한 가치로 삼고 있습니다. 재활 운동은 어르신 개개인의 상태에 맞추어 세심하게 진행하며, 어르신의 건강 상태와 하루 일과를 보호자분들께 공유해드림으로써 언제나 안심하실 수 있도록 하고 있습니다.
+              </p>
+              <p className="overview-description">
+                "사랑하고 섬기며 베풀며 살겠습니다"라는 원훈을 따라, 저희 The Vida는 어르신들께 늘 가족 같은 마음으로 최고의 서비스를 제공하며, 쾌적하고 안전한 환경에서 더 나은 삶을 누리실 수 있도록 최선을 다할 것을 약속드립니다.
+              </p>
             </div>
             
             <div className="overview-image">
@@ -257,11 +259,14 @@ const LocationAnyang: React.FC = () => {
               <p className="address-text">📍 {locationData.address}</p>
             </div>
             <div className="map-container">
-              <StaticKakaoMap
-                centerX={420400}
-                centerY={1100912}
+              <KakaoMap
                 title="더비다 안양점"
-                address="경기도 안양시 만안구 전파로 19-1"
+                address="경기도 안양시 만안구 전파로 19-1 더비다요양원"
+                lat={locationData.lat}
+                lng={locationData.lng}
+                height={400}
+                level={3}
+                showDirections={true}
               />
             </div>
           </div>

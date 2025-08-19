@@ -1,5 +1,5 @@
 import React from 'react';
-import StaticKakaoMap from '../components/StaticKakaoMap';
+import KakaoMap from '../components/KakaoMap';
 import './LocationDetail.css';
 
 const LocationIncheon: React.FC = () => {
@@ -7,7 +7,7 @@ const LocationIncheon: React.FC = () => {
     name: '더비다 인천점',
     address: '인천광역시 미추홀구 제물량로4번길 34-33',
     phone: '032-891-0121',
-    features: ['24시간 전문 간호', '신축생활실', '영양관리', '재활치료시스템'],
+    features: ['24시간 전문 간호', '재활치료실', '해양 전망', '카페테리아'],
     description: '인천 미추홀구에 위치한 요양원입니다. 편안하고 따뜻한 환경에서 전문적인 케어 서비스를 제공합니다.',
     facilities: [
       '공동 거실',
@@ -15,7 +15,7 @@ const LocationIncheon: React.FC = () => {
       '프로그램실',
       '재활&물리치료실'
     ],
-    capacity: '50명',
+    capacity: '60명',
     staff: '전문 간호사 8명, 재활치료사 3명, 영양사 2명'
   };
 
@@ -218,11 +218,12 @@ const LocationIncheon: React.FC = () => {
               <p className="address-text">📍 {locationData.address}</p>
             </div>
             <div className="map-container">
-              <StaticKakaoMap
-                centerX={485555}
-                centerY={1081038}
+              <KakaoMap
                 title="더비다 인천점"
                 address="인천광역시 미추홀구 제물량로4번길 34-33"
+                height={420}
+                level={3}
+                showDirections={true}
               />
             </div>
           </div>
