@@ -1,3 +1,16 @@
+import KakaoDiag from "../components/KakaoDiag";
+
+export default function LocationIncheon() {
+  return (
+    <div>
+      <KakaoDiag /> {/* 진단용: 확인 후 삭제해도 됨 */}
+      {/* 기존 페이지 내용들… */}
+    </div>
+  );
+}
+
+
+
 import React from 'react';
 import KakaoMap from '../components/KakaoMap';
 import './LocationDetail.css';
