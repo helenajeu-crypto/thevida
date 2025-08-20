@@ -260,13 +260,8 @@ const LocationAnyang: React.FC = () => {
             </div>
             <div className="map-container">
               <KakaoMap
-                title="더비다 안양점"
+                name="더비다 안양점"
                 address="경기도 안양시 만안구 전파로 19-1 더비다요양원"
-                lat={locationData.lat}
-                lng={locationData.lng}
-                height={400}
-                level={3}
-                showDirections={true}
               />
             </div>
           </div>

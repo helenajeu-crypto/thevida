@@ -231,7 +231,6 @@ const LocationIncheon: React.FC = () => {
   </div>
 </section>
 
-
       {/* CTA Section */}
       <section className="section cta">
         <div className="container">

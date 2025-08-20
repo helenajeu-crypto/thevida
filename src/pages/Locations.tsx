@@ -85,11 +85,8 @@ const Locations: React.FC = () => {
           <h2 className="map-title">지점 위치</h2>
           <div className="map-container">
             <KakaoMap
-              title="더비다 요양원 지점"
+              name="더비다 요양원 지점"
               address="인천광역시 미추홀구 제물량로4번길 34-33"
-              height={400}
-              level={8}
-              showDirections={true}
             />
           </div>
         </div>
