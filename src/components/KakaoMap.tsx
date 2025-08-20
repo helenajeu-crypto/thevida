@@ -5,6 +5,7 @@ declare global { interface Window { kakao: any } }
 
 type Props = {
   title?: string;
+  name?: string;  // 추가: name prop
   address?: string;
   lat?: number;
   lng?: number;
