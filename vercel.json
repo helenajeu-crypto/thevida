@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://your-backend-domain.com/api/$1" },
-    { "source": "/(.*)", "destination": "/" }
-  ],
-  "env": {
-    "REACT_APP_API_URL": "https://your-backend-domain.com/api"
-  }
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
 
