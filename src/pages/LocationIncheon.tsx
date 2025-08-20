@@ -1,16 +1,3 @@
-import KakaoDiag from "../components/KakaoDiag";
-
-export default function LocationIncheon() {
-  return (
-    <div>
-      <KakaoDiag /> {/* 진단용: 확인 후 삭제해도 됨 */}
-      {/* 기존 페이지 내용들… */}
-    </div>
-  );
-}
-
-
-
 import React from 'react';
 import KakaoMap from '../components/KakaoMap';
 import './LocationDetail.css';
@@ -230,15 +217,17 @@ const LocationIncheon: React.FC = () => {
             <div className="address-info">
               <p className="address-text">📍 {locationData.address}</p>
             </div>
-            <div className="map-container">
-              <KakaoMap
-                title="더비다 인천점"
-                address="인천광역시 미추홀구 제물량로4번길 34-33"
-                height={420}
-                level={3}
-                showDirections={true}
-              />
-            </div>
+<div className="map-container" style={{ minHeight: 420, border: '2px solid #f00' }}>
+  <KakaoMap
+    title="더비다 인천점"
+    address="인천광역시 미추홀구 제물량로4번길 34-33"
+    height={420}
+    level={3}
+    showDirections={true}
+  />
+</div>
+
+
           </div>
         </div>
       </section>
