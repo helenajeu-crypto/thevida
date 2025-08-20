@@ -209,28 +209,35 @@ const LocationIncheon: React.FC = () => {
         </div>
       </section>
 
-      {/* Directions Section */}
-      <section id="directions" className="section directions">
-        <div className="container">
-          <h2 className="section-title">오시는 길</h2>
-          <div className="directions-content">
-            <div className="address-info">
-              <p className="address-text">📍 {locationData.address}</p>
-            </div>
-<div className="map-container" style={{ minHeight: 420, border: '2px solid #f00' }}>
-  <KakaoMap
-    title="더비다 인천점"
-    address="인천광역시 미추홀구 제물량로4번길 34-33"
-    height={420}
-    level={3}
-    showDirections={true}
-  />
-</div>
+{/* Directions Section */}
+<section id="directions" className="section directions">
+  <div className="container">
+    <h2 className="section-title">오시는 길</h2>
+    <div className="directions-content">
+      <div className="address-info">
+        <p className="address-text">📍 {locationData.address}</p>
+      </div>
+      <div
+        className="map-container"
+        style={{
+          minHeight: "420px",
+          border: "2px solid #f00",
+          borderRadius: "8px",
+          overflow: "hidden",
+        }}
+      >
+        <KakaoMap
+          title="더비다 인천점"
+          address="인천광역시 미추홀구 제물량로4번길 34-33"
+          height={420}
+          level={3}
+          showDirections={true}
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="section cta">
