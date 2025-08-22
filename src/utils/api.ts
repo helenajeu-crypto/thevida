@@ -14,7 +14,7 @@ export interface HomepageImage {
   description: string;
   imageUrl: string;
   category: 'hero' | 'location' | 'facility' | 'gallery';
-  subcategory?: 'incheon' | 'anyang' | 'main' | 'sign' | 'lobby' | 'room' | 'therapy' | 'general';
+  subcategory?: 'incheon' | 'anyang' | 'main' | 'sign' | 'lobby' | 'room' | 'therapy' | 'general' | 'rehabilitation' | 'cognitive' | 'birthday';
   order_num?: number;
   isActive: boolean | number;
   uploadDate?: string;
