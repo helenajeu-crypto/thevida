@@ -1,12 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { homepageAPI, HomepageImage } from '../utils/api';
 import HeroSlider from '../components/HeroSlider';
 import './Home.css';
 
+interface LocationData {
+  incheon: HomepageImage | null;
+  anyang: HomepageImage | null;
+}
+
 const Home: React.FC = () => {
+  const [locationImages, setLocationImages] = useState<LocationData>({
+    incheon: null,
+    anyang: null
+  });
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadLocationImages = async () => {
+      try {
+        setIsLoading(true);
+        const locationImages = await homepageAPI.getImagesByCategory('location');
+        
+        const locationData: LocationData = {
+          incheon: locationImages.find(img => img.subcategory === 'incheon') || null,
+          anyang: locationImages.find(img => img.subcategory === 'anyang') || null
+        };
+        
+        setLocationImages(locationData);
+      } catch (error) {
+        console.error('지점 이미지 로드 실패:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadLocationImages();
+  }, []);
+
+  const getLocationImageUrl = (location: 'incheon' | 'anyang') => {
+    const image = locationImages[location];
+    if (image) {
+      return `http://localhost:3001${image.imageUrl}`;
+    }
+    return null;
+  };
+
   return (
     <div className="home">
-
       {/* 
         관리자 가이드 - Hero Section:
         - hero-title: 메인 문구 변경 (어르신들 삶의 존엄과 가치를 함께 만들어 갑니다)
@@ -28,7 +69,17 @@ const Home: React.FC = () => {
           <div className="locations-grid">
             <Link to="/locations/incheon" className="location-card">
               <div className="location-image">
-                <div className="image-placeholder">🏥</div>
+                {isLoading ? (
+                  <div className="image-placeholder">🏥</div>
+                ) : getLocationImageUrl('incheon') ? (
+                  <img 
+                    src={getLocationImageUrl('incheon')!} 
+                    alt="더비다 인천점"
+                    className="location-image-img"
+                  />
+                ) : (
+                  <div className="image-placeholder">🏥</div>
+                )}
               </div>
               <div className="location-content">
                 <h3>더비다 인천점</h3>
@@ -51,7 +102,17 @@ const Home: React.FC = () => {
             
             <Link to="/locations/anyang" className="location-card">
               <div className="location-image">
-                <div className="image-placeholder">🏥</div>
+                {isLoading ? (
+                  <div className="image-placeholder">🏥</div>
+                ) : getLocationImageUrl('anyang') ? (
+                  <img 
+                    src={getLocationImageUrl('anyang')!} 
+                    alt="더비다 안양점"
+                    className="location-image-img"
+                  />
+                ) : (
+                  <div className="image-placeholder">🏥</div>
+                )}
               </div>
               <div className="location-content">
                 <h3>더비다 안양점</h3>
